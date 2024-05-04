@@ -11,6 +11,30 @@ type DemoBot = Omit<Bot, "session">;
 
 export const DEMO_BOTS: DemoBot[] = [
   {
+    id: "6",
+    avatar: "1f574",
+    name: "MBA Professional",
+    botHello:
+      "Hello! How can I assist you to navigate any business related topics today?",
+    context: [
+      {
+        role: "system",
+        content: TEMPLATE(
+          "Business and investment advisor specialized who is also a recent MBA",
+        ),
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo",
+      temperature: 0.2,
+      maxTokens: 4096,
+      sendMemory: false,
+    },
+    readOnly: true,
+    datasource: "mba",
+    hideContext: false,
+  },
+  {
     id: "2",
     avatar: "1f916",
     name: "My Documents",
